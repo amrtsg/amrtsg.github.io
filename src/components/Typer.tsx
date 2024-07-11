@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '@/components/css/Typer.css'; // Import the CSS file for styling
 
 const initialHTML = `

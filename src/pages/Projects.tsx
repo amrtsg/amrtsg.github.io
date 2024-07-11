@@ -1,14 +1,21 @@
-// App.js or any other component where you want to use ProjectsCarousel
-
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import './css/Projects.css';
 import { EffectCards } from 'swiper/modules';
-import AnimatedBack from '@/components/AnimatedBack'
+import AnimatedBack from '@/components/AnimatedBack';
 
-const projects = [
+interface Project {
+  category: string;
+  name: string;
+  desc: string;
+  skills: string[];
+  image: string;
+  githubLink: string;
+}
+
+const projects: Project[] = [
   {
     category: "<MachineLearning />",
     name: "DepGAN",
@@ -67,23 +74,23 @@ const Projects = () => {
   }));
 
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
-  const [activeSlideIndices, setActiveSlideIndices] = useState(
-    categories.reduce((acc, category, index) => ({
+  const [activeSlideIndices, setActiveSlideIndices] = useState<{ [key: string]: number }>(
+    categories.reduce((acc, category) => ({
       ...acc,
       [category]: 0
     }), {})
   );
 
-  const handleCategoryChange = (index) => {
+  const handleCategoryChange = (index: number) => {
     setActiveCategoryIndex(index);
-    setActiveSlideIndices(prevState => ({
+    setActiveSlideIndices((prevState) => ({
       ...prevState,
       [categories[activeCategoryIndex]]: 0 // Reset active slide index for the current category
     }));
   };
 
-  const handleSlideChange = (swiper, category) => {
-    setActiveSlideIndices(prevState => ({
+  const handleSlideChange = (swiper: any, category: string) => {
+    setActiveSlideIndices((prevState) => ({
       ...prevState,
       [category]: swiper.activeIndex
     }));
