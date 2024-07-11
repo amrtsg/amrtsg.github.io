@@ -1,0 +1,32 @@
+/* src/Typewriter.css */
+
+.typewriter {
+  overflow: hidden; /* Ensures the typewriter animation stays within bounds */
+  white-space: pre; /* Preserves whitespace and newline characters */
+  font-family: 'Courier New', Courier, monospace; /* Example font */
+  font-size: 2rem; /* Default font size */
+  margin: 0;
+  color: #ddd; /* Color of the typing text */
+  position: relative; /* Ensure the cursor's position is relative to this container */
+}
+
+.var-highlight {
+  color: #c678dd;
+}
+
+.string-highlight {
+  color: #98c379;
+}
+
+/* Responsive font size adjustments */
+@media (max-width: 768px) {
+  .typewriter {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter {
+      font-size: 0.9rem; /* Further adjust font size for even smaller screens */
+  }
+}

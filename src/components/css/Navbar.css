@@ -1,0 +1,56 @@
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  font-family: 'Courier New', Courier, monospace;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links li {
+  margin: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-weight: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #fda500;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links horizontally */
+  }
+
+  .navbar-links a {
+    padding: 1rem;
+  }
+}

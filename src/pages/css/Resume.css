@@ -1,0 +1,11 @@
+iframe {
+    width: 90vw; /* Default width for full viewport width */
+    height: 80vh;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        width: 90vw; /* Adjust width for smaller screens */
+        height: 80vh;
+    }
+}

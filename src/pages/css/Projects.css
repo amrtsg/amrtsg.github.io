@@ -1,0 +1,125 @@
+.projects-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.category-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.category-navigation button {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 1000;
+}
+
+.category-navigation button.active {
+  border: 1px solid #fff;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-slide {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; /* Adjust padding for smaller screens */
+}
+
+.project-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.project-details {
+  width: 100%;
+  text-align: center;
+  display: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.swiper-slide-active .project-details {
+  display: block;
+}
+
+.skills {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.skill-btn {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.skill-btn.skill-0 {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.skill-btn.skill-1 {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.skill-btn.skill-2 {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.skill-btn.skill-3 {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+.github-button {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+      padding: 0 10px; /* Adjust overall padding for smaller screens */
+  }
+
+  .project-slide {
+      padding: 0; /* Reset padding for project slide */
+  }
+
+  .project-image {
+      max-height: 300px; /* Reduce maximum height for smaller screens */
+  }
+}
