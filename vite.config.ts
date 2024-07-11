@@ -7,4 +7,5 @@ export default defineConfig({
   plugins: [
     tsconfigPaths(),
     react()],
+  base:"/"
 })
