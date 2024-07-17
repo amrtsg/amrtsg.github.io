@@ -51,6 +51,7 @@
   margin: 5px;
   padding: 5px 10px;
   border: 2px solid transparent;
+  font-family: 'Courier New', Courier, monospace;
   border-radius: 25px;
   cursor: pointer;
   outline: none;
