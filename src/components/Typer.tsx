@@ -5,7 +5,6 @@ const initialHTML = `
   <pre id="typer">
     <span class="var-highlight">var</span> contact = {
       name: <span class="string-highlight">'<strong>Amr Ghoneim</strong>'</span>,
-      email: <span class="string-highlight-link">'<a href="mailto:amrtsg@gmail.com" target="_blank">amrtsg@gmail.com</a>'</span>,
       github: <span class="string-highlight-link">'<a href="https://github.com/amrtsg" target="_blank">github.com/amrtsg</a>'</span>,
       linkedin: <span class="string-highlight-link">'<a href="https://www.linkedin.com/in/amrtsg/" target="_blank">linkedin.com/in/amrtsg/</a>'</span>,
       skills:[<span class="string-highlight">'Machine Learning'</span>,
