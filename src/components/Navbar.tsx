@@ -1,14 +1,30 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '@/components/css/Navbar.css'; // Import a CSS file for styling
+import '@/components/css/Navbar.css';
+import { TiThMenu } from "react-icons/ti";
 
 function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <nav className="navbar">
-      <ul className="navbar-links">
-        <li><Link to="/">Home();</Link></li>
-        <li><Link to="/projects">Projects.js</Link></li>
-        <li><Link to="/resume">Resume.pdf</Link></li>
-      </ul>
+      <div className="navbar-container">
+        {/* Mobile menu toggle button */}
+        <button className="mobile-menu-toggle" onClick={toggleMenu}>
+          <TiThMenu />
+        </button>
+
+        {/* Menu links for large screens */}
+        <ul className={`navbar-links ${showMenu ? 'active' : ''}`}>
+          <li><Link to="/" onClick={() => setShowMenu(false)}>Home();</Link></li>
+          <li><Link to="/projects" onClick={() => setShowMenu(false)}>Projects.js</Link></li>
+          <li><Link to="/resume" onClick={() => setShowMenu(false)}>Resume.pdf</Link></li>
+        </ul>
+      </div>
     </nav>
   );
 }

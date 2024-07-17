@@ -2,22 +2,46 @@
   width: 100%;
   background-color: transparent;
   color: white;
-  display: flex;
-  justify-content: center; /* Center items horizontally */
   font-family: 'Courier New', Courier, monospace;
-  align-items: center;
-  padding: 10px 20px;
   position: fixed;
   top: 0;
   left: 0;
-  box-sizing: border-box;
-  z-index: 1000; /* Ensure navbar is above other content */
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.mobile-menu-toggle {
+  display: none; /* Hide toggle button by default */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 0;
+  outline: none !important;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
 }
 
 .navbar-links li {
@@ -29,7 +53,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-weight: 1000;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .navbar-links a:hover {
@@ -38,19 +62,32 @@
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-    padding: 10px;
+  .navbar-container {
+    justify-content: space-between; /* Adjust for mobile layout */
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show toggle button on smaller screens */
   }
 
   .navbar-links {
-    margin-top: 10px;
-    flex-direction: column; /* Stack links vertically */
-    align-items: center; /* Center links horizontally */
+    display: none; /* Hide menu links by default on smaller screens */
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show menu links when active */
   }
 
   .navbar-links a {
-    padding: 1rem;
+    padding: 0.5rem; /* Adjust padding as needed */
   }
 }
