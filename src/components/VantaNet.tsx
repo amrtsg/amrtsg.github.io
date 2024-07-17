@@ -20,7 +20,8 @@ class VantaNet extends Component {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0xFFFFFF,
+      color: 0x5c4db1,
+      points: 20.00,
     });
   }
 

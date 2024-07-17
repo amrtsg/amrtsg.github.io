@@ -27,7 +27,7 @@ class Circle {
     if (!this.active) return;
     ctx.beginPath();
     ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
-    ctx.fillStyle = `rgba(156,217,249,${this.active})`;
+    ctx.fillStyle = `rgba(92,77,177,${this.active})`;
     ctx.fill();
   }
 }
@@ -185,7 +185,7 @@ const AnimatedHeader = () => {
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(point.x, point.y);
-        ctx.strokeStyle = `rgba(156,217,249,${p.active})`;
+        ctx.strokeStyle = `rgba(92,77,177,${p.active})`;
         ctx.stroke();
       }
     }

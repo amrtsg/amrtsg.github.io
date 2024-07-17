@@ -5,7 +5,7 @@ import 'swiper/css/effect-coverflow';
 import './css/Projects.css';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import AnimatedBack from '@/components/AnimatedBack';
-import VantaWaves from '@/components/VantaWaves';
+import VantaNet from '@/components/VantaNet';
 
 interface Project {
   name: string;
@@ -69,7 +69,7 @@ const Projects = () => {
 
   return (
     <>
-      <VantaWaves />
+      <VantaNet />
       <div className="projects-container">
         <div className="animated-back">
           <AnimatedBack />
