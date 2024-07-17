@@ -10,10 +10,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <video autoPlay loop muted className="background-video">
+        {/*<video autoPlay loop muted className="background-video">
           <source src={`/back.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video>*/}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

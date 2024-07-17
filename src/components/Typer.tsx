@@ -5,9 +5,9 @@ const initialHTML = `
   <pre id="typer">
     <span class="var-highlight">var</span> contact = {
       name: <span class="string-highlight">'<strong>Amr Ghoneim</strong>'</span>,
-      email: <span class="string-highlight">'<a href="#">amrtsg@gmail.com</a>'</span>,
-      github: <span class="string-highlight">'<a href="#">github.com/amrtsg</a>'</span>,
-      linkedin: <span class="string-highlight">'<a href="#">linkedin.com/in/amrtsg/</a>'</span>,
+      email: <span class="string-highlight-link">'<a href="#">amrtsg@gmail.com</a>'</span>,
+      github: <span class="string-highlight-link">'<a href="#">github.com/amrtsg</a>'</span>,
+      linkedin: <span class="string-highlight-link">'<a href="#">linkedin.com/in/amrtsg/</a>'</span>,
       skills:[<span class="string-highlight">'Machine Learning'</span>,
               <span class="string-highlight">'3D Reconstruction'</span>,
               <span class="string-highlight">'Software Development'</span>
@@ -19,14 +19,15 @@ const initialHTML = `
 
 function Typer() {
   const [displayText, setDisplayText] = useState('');
-  const typeSpeed = 1;
+  const typeSpeed = 10; // Adjust the interval for typing speed
+  const step = 3; // Number of characters to add per interval
 
   useEffect(() => {
     let cursorPosition = 0;
     const interval = setInterval(() => {
       if (cursorPosition <= initialHTML.length) {
         setDisplayText(initialHTML.substring(0, cursorPosition) + '▌'); // Add a cursor character
-        cursorPosition++;
+        cursorPosition += step; // Move cursor by step
       } else {
         clearInterval(interval); // Clear interval once typing is complete
       }

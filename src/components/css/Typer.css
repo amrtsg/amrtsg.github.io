@@ -18,6 +18,11 @@
   color: #98c379;
 }
 
+.string-highlight-link {
+  color: #98c379;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive font size adjustments */
 @media (max-width: 768px) {
   .typewriter {

@@ -5,56 +5,24 @@
   box-sizing: border-box;
 }
 
-.category-navigation {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.category-navigation button {
-  margin: 0 10px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  z-index: 1000;
-}
-
-.category-navigation button.active {
-  border: 1px solid #fff;
-}
-
-.mySwiper {
+.swiper {
   width: 100%;
-  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  max-height: 600px;
 }
 
-.project-slide {
+.swiper-slide img {
+  width: 200px; /* Set fixed width */
+  height: 200px; /* Set fixed height */
+  display: block;
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px; /* Adjust padding for smaller screens */
-}
-
-.project-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
 }
 
 .project-details {
@@ -108,18 +76,4 @@
 
 .github-button {
   color: #fff;
-}
-
-@media (max-width: 768px) {
-  .projects-container {
-      padding: 0 10px; /* Adjust overall padding for smaller screens */
-  }
-
-  .project-slide {
-      padding: 0; /* Reset padding for project slide */
-  }
-
-  .project-image {
-      max-height: 300px; /* Reduce maximum height for smaller screens */
-  }
 }
