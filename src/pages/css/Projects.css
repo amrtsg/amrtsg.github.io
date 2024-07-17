@@ -32,7 +32,9 @@
   color: #fff;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 10px;
-  border-radius: 5px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 .swiper-slide-active .project-details {
@@ -49,7 +51,7 @@
   margin: 5px;
   padding: 5px 10px;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   outline: none;
 }
@@ -75,5 +77,14 @@
 }
 
 .github-button {
+  position: relative;
+  margin-top: 10px;
   color: #fff;
+  font-size: 3em;
+}
+
+.github-icon {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
 }

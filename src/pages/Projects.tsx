@@ -7,6 +7,9 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 import AnimatedBack from '@/components/AnimatedBack';
 import VantaNet from '@/components/VantaNet';
 
+import { DiGithubFull } from "react-icons/di";
+import { FaGithub } from "react-icons/fa";
+
 interface Project {
   name: string;
   desc: string;
@@ -110,7 +113,9 @@ const Projects = () => {
                         </button>
                       ))}
                     </div>
-                    <a href={project.githubLink} className="github-button" target="_blank" rel="noopener noreferrer">getCode();</a>
+                    <div className="github-button">
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer"><FaGithub className="github-icon"/> <DiGithubFull /></a>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
