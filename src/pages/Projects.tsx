@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState, useRef } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import './css/Projects.css';
@@ -65,9 +65,16 @@ const projects: Project[] = [
 
 const Projects = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const swiperRef = useRef<SwiperClass | null>(null);
 
-  const handleSlideChange = (swiper: any) => {
+  const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlideIndex(swiper.activeIndex);
+  };
+
+  const handleSlideClick = (index: number) => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+    }
   };
 
   return (
@@ -94,9 +101,10 @@ const Projects = () => {
             modules={[EffectCoverflow, Pagination]}
             className="swiper"
             onSlideChange={(swiper) => handleSlideChange(swiper)}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {projects.map((project, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} onClick={() => handleSlideClick(index)}>
                 <div className="project-slide">
                   <img
                     src={project.image}
@@ -114,7 +122,7 @@ const Projects = () => {
                       ))}
                     </div>
                     <div className="github-button">
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer"><FaGithub className="github-icon"/> <DiGithubFull /></a>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer"><FaGithub className="github-icon"/> <DiGithubFull /></a>
                     </div>
                   </div>
                 </div>
