@@ -1,12 +1,12 @@
 import Typer from '@/components/Typer';
 import './css/Home.css';
 import AnimatedBack from '@/components/AnimatedBack';
-import VantaWaves from '@/components/VantaWaves';
+import VantaGlobe from '@/components/VantaGlobe';
 
 function Home() {
   return (
     <>
-    <VantaWaves />
+    <VantaGlobe />
     <div className="content">
       <div className="animated-back">
         <AnimatedBack />

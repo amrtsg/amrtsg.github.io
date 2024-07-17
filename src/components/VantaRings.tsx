@@ -1,8 +1,8 @@
 import React, { Component, RefObject } from 'react';
 // @ts-ignore
-import globe from 'vanta/dist/vanta.globe.min';
+import rings from 'vanta/dist/vanta.rings.min';
 
-class VantaGlobe extends Component {
+class VantaRings extends Component {
   vantaRef: RefObject<HTMLDivElement>;
   vantaEffect: any;
   constructor(props: {}) {
@@ -11,7 +11,7 @@ class VantaGlobe extends Component {
   }
 
   componentDidMount() {
-    this.vantaEffect = globe({
+    this.vantaEffect = rings({
       el: this.vantaRef.current,
       mouseControls: true,
       touchControls: true,
@@ -20,9 +20,8 @@ class VantaGlobe extends Component {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x2f6b16,
+      color: 0xff3f81,
       color2: 0xffffff,
-      size: 0.50,
       backgroundColor: 0x23153c
     });
   }
@@ -48,4 +47,4 @@ class VantaGlobe extends Component {
   }
 }
 
-export default VantaGlobe;
+export default VantaRings;
