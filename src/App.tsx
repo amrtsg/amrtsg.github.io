@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 import About from "./pages/About";
 import Tools from "./pages/Tools";
@@ -14,7 +14,7 @@ import BackRemove from "./tools/image-tools/BackRemove";
 
 import "./App.css";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />,
